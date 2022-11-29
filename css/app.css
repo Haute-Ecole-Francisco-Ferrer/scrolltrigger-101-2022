@@ -24,6 +24,7 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 20px;
     color: #262626;
+    background-color: red;
 }
 .project {
     text-align: center;

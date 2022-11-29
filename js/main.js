@@ -29,21 +29,70 @@ $( document ).ready(function() {
 //     })
 
 
-gsap.set("#project02", {
+// gsap.set("#project02", {
+//     scrollTrigger: {
+
+//         trigger:'#project02 img',
+//         start:'0% 70%',
+//         end: '100% 30%',
+//         markers: true,
+//         toggleClass: {
+//             targets: "#project02",
+//             className: "active" }
+
+//     }})
+
+
+
+// const tl = gsap.timeline({
+//     defaults: {
+//         ease: 'none'
+//     },
+//     scrollTrigger: {
+//         trigger: '.bcg-parallax',
+//         start: 'top 80%',
+//         end: 'bottom 50%',
+//         scrub: true,
+//         markers: {
+//             visible: true,
+//             startColor: 'pink',
+//             endColor: 'pink',
+//             label: 'truc'
+//         }
+//     }
+// }) 
+
+// tl
+
+// .from('.content-wrapper', {
+//     duration: 2, 
+//     autoAlpha: 0
+//     }, 0.5)
+// .from('.bcg', {
+//     duration: 2, 
+//     y: '-30%'
+//     },0)
+
+
+
+gsap.to(["#intro h1, #intro p"], {
+    autoAlpha: 0,
+    ease: 'none',
     scrollTrigger: {
-
-        trigger:'#project02 img',
-        start:'0% 80%',
-        end: '100% 50%',
-        markers: true,
-        toggleClass: {
-            targets: "#project02",
-            className: "active" }
-
-    }})
-
-
-
+        trigger: '#intro .content',
+        start:'top-=5% top',
+        // end:'bottom top+=20%',
+        pin: true,
+        scrub: true,
+        markers: {
+            visible: true,
+            startColor: 'pink',
+            endColor: 'pink',
+            label: 'truc'
+        }
+    } 
+    
+    })
 
 
 }); //ready
